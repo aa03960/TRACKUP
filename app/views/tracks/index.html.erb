@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+      <tr>
+        <td><%= track.title %></td>
+        <td><%= track.artist %></td>
+        <td><%= track.album %></td>
+        <td><%= track.date %></td>
+        <td><%= link_to 'Show', track, class: "a-primary badge rounded-pill bg-light text-dark button text-decoration-none" %>
+        <td><%= link_to 'Edit', edit_track_path(track), class: "a-primary badge rounded-pill bg-light text-dark button text-decoration-none"%></td>
+        <td><%= link_to 'Remove', track, method: :delete, data: { confirm: 'Are you sure you want to delete this track?' }, class: "a-primary badge rounded-pill bg-warning text-dark text-decoration-none" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'ADD TRACK', new_track_path, class:"btn btn-outline-danger" %>
+
+

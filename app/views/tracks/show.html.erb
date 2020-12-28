@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Track Details</h1>
+  <li>Title: <%= @track.title %> </li>
+  <li>Artist: <%= @track.artist %> </li>
+  <li >Album: <%= @track.album %> </li>
+  <li>Date Created: <%= @track.date %></li>
+  <hr class="my-4">
+
+  <%= render 'formNotes', track: @track %>
+
+</div>
+<br>
+<br>
+
+<%= link_to 'Edit', edit_track_path(@track), class:"btn btn-outline-dark" %>
+<%= link_to 'Back', tracks_path, class:"btn btn-outline-dark" %>
