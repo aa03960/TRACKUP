@@ -1,1 +1,28 @@
-ABOUT US
+<p id="notice"><%= notice %></p>
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracks.each do |track| %>
+    <% if track.favourite == true %> 
+      <tr>
+        <td><%= track.title %></td>
+        <td><%= track.artist %></td>
+        <td><%= track.album %></td>
+        <td><%= track.date %></td>
+        <td><%= link_to 'Show', track, class: "a-primary badge rounded-pill bg-light text-dark button text-decoration-none" %></td>
+        <td><%= link_to 'Edit', edit_track_path(track), class: "a-primary badge rounded-pill bg-light text-dark button text-decoration-none"%></td>
+      </tr>
+    <% end %>
+    <%end%>
+  </tbody>
+</table>

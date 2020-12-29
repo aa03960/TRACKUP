@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
-  before_action :set_track, only: [:show, :edit, :update, :destroy]
+  before_action :set_track, only: [:show, :edit, :update, :destroy, :show_favourite]
+
 
   # GET /tracks
   # GET /tracks.json
@@ -11,6 +12,14 @@ class TracksController < ApplicationController
   # GET /tracks/1.json
   def show
   end
+
+  def show_favourite
+    if @track.favourite == true
+      render text: 'ADDED TO FAVOURITES'
+  end
+  helper_method :show_favourite
+end
+
 
   # GET /tracks/new
   def new
@@ -69,6 +78,6 @@ class TracksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def track_params
-      params.require(:track).permit(:title, :artist, :album, :date, :notes, :favourites)
+      params.require(:track).permit(:title, :artist, :album, :date, :notes, :favourite)
     end
 end

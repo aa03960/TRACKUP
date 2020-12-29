@@ -7,6 +7,10 @@
   <li>Artist: <%= @track.artist %> </li>
   <li >Album: <%= @track.album %> </li>
   <li>Date Created: <%= @track.date %></li>
+  <% if @track.favourite == true %>     
+  <p>Added to favourites</p>
+<% end %>
+
   <hr class="my-4">
 
   <%= render 'formNotes', track: @track %>
