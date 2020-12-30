@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :useers
   resources :tracks
   root 'tracks#index'
   get 'home/favourites'

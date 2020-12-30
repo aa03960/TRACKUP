@@ -65,7 +65,7 @@ end
   def destroy
     @track.destroy
     respond_to do |format|
-      format.html { redirect_to tracks_url, notice: 'Track was successfully destroyed.' }
+      format.html { redirect_to tracks_url, notice: 'Track was successfully removed.' }
       format.json { head :no_content }
     end
   end
@@ -78,6 +78,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def track_params
-      params.require(:track).permit(:title, :artist, :album, :date, :notes, :favourite)
+      params.require(:track).permit(:title, :artist, :album, :date, :notes, :favourite, :user_id, :useers)
     end
 end

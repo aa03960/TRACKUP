@@ -9,6 +9,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'mail_form'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
