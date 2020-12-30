@@ -8,12 +8,17 @@
       <th>Artist</th>
       <th>Album</th>
       <th>Date</th>
-      <th colspan="4"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
+
+
   <tbody>
+
     <% @tracks.each do |track| %>
+    <% if track.user_id == current_useer.id%>
+
       <tr>
         <td><%= track.title %></td>
         <td><%= track.artist %></td>
@@ -24,6 +29,7 @@
         <td><%= link_to 'Remove', track, method: :delete, data: { confirm: 'Are you sure you want to delete this track?' }, class: "a-primary badge rounded-pill bg-warning text-dark text-decoration-none" %></td>
       </tr>
     <% end %>
+  <%end%>
   </tbody>
 </table>
 

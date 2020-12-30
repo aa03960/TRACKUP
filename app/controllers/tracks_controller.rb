@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy, :show_favourite]
+  before_action :authenticate_useer!, except: [:index, :show]
 
 
   # GET /tracks

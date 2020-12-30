@@ -1,7 +1,7 @@
   <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-    <%= link_to 'TrackUP', tracks_path, class:"navbar-brand"%>
+    <%= link_to 'TrackUP', root_path, class:"navbar-brand"%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,6 +9,9 @@
       <ul class="navbar-nav">
 
         <% if useer_signed_in? %>
+         <li class="nav-item">
+          <%= link_to "Track List", tracks_path, class: "nav-link" %>
+        </li>
 
         <li class="nav-item">
           <%= link_to "Favourites", home_favourites_path, class: "nav-link" %>
