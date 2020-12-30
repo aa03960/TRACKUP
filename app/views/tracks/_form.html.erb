@@ -13,14 +13,14 @@
 
   <div class="field form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, class:"form-control"%>
+    <%= form.text_field :title, required: true, class:"form-control"%>
   </div>
-
+<br>
   <div class="field form-group">
     <%= form.label :artist %>
-    <%= form.text_field :artist, class:"form-control" %>
+    <%= form.text_field :artist, required: true, class:"form-control" %>
   </div>
-
+<br>
   <div class="field form-group">
     <%= form.label :album %>
     <%= form.text_field :album, class:"form-control" %>

@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
-
+def index
+end
 
   def favourites
   	@tracks = Track.all
@@ -8,4 +9,5 @@ class HomeController < ApplicationController
 
   def contact
   end
+
 end
