@@ -1,6 +1,7 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy, :show_favourite]
   before_action :authenticate_useer!, except: [:index, :show]
+ # before_action :correct_user, only: [:edit, :update, :destroy]
 
 
   # GET /tracks
@@ -70,6 +71,11 @@ end
       format.json { head :no_content }
     end
   end
+
+  #def correct_user
+    #@track = current_useer.tracks.find_by(id: params[:id])
+# # redirect_to track_path, notice: 'Unauthorised Access' if @track.nil?
+ # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

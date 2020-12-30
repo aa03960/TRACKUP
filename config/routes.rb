@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
   devise_for :useers
   resources :tracks
   root 'home#index'
