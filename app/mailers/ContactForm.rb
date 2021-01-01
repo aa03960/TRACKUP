@@ -1,14 +1,13 @@
-class ContactForm < MailForm::Base
-  attributes :name,  :validate => true
-  attributes :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attributes :message
-  attribute :nickname,  :captcha  => true
+class ContactForm < ActionMailer::Base
 
-  def headers
-    {
-        :subject => "Your subject",
-        :to => "example@example.com",
-        :from => %("#{name}" <#{email}>)
-    }
+
+  default from: 'notifications@example.com'
+
+  def contact_email
+    @user = params[:user]
+    @url  = 'http://example.com/login'
+    mail(to: @user.email, subject: 'You have a message from a user')
   end
 end
+
+
