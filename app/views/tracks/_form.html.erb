@@ -11,36 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field form-group">
-    <%= form.label :title %>
+  <div class="field form-group .no-border">
+    <%= form.label :title, class:"form-colour" %>
     <%= form.text_field :title, required: true, class:"form-control"%>
   </div>
 <br>
   <div class="field form-group">
-    <%= form.label :artist %>
+    <%= form.label :artist, class:"form-colour" %>
     <%= form.text_field :artist, required: true, class:"form-control" %>
   </div>
 <br>
   <div class="field form-group">
-    <%= form.label :album %>
+    <%= form.label :album, class:"form-colour" %>
     <%= form.text_field :album, class:"form-control" %>
   </div>
 <br>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+  <div class="field form-group">
+    <%= form.label :date, class:"form-colour" %>
+    <%= form.date_select :date, class:"form-control" %>
   </div>
   <br>
 
     <div class="field form-group">
-    <label for="exampleInputEmail1">Notes</label>
+    <label for="exampleInputEmail1", class ="form-colour">Notes</label>
     <%= form.text_field :notes, class:"form-control"%>
   </div>
   <br>
 
   <div class="field">
-    <%= form.label "Add to favourites" %>
+    <%= form.label "Add to favourites", class:"form-colour" %>
     <%= form.check_box :favourite %> <br />
 </div>
 
@@ -50,6 +50,6 @@
   <br>
 
   <div class="actions button">
-    <%= form.submit class:"btn btn-outline-danger" %>
+    <%= form.submit class:"btn btn-danger" %>
   </div>
 <% end %>

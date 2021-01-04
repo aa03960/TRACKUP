@@ -1,1 +1,23 @@
-HELLLO
+<% if useer_signed_in? %>
+<h1 style="color:white;", class="center"> Welcome to your personal music tracking website</h1>
+
+
+<br>
+
+<br>
+
+<br>
+
+<%else%>
+<h1 style="color:white;", class="center"> Welcome to your personal music tracking website</h1>
+
+
+<br>
+
+<br>
+
+<br>
+<%= button_to 'Sign In', new_useer_session_path, class: 'center btn btn-danger' %>
+<br>
+<%= button_to 'Sign Up', new_useer_registration_path, class: 'btn btn-danger' %>
+<%end%>

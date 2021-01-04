@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+body{ 
+  background-image: url(bg10.jpg); 
+  background-repeat: no-repeat;
+  background-size: 2000px 1080px;
+}
+
+
+.form-control {
+    background: transparent;
+}
+
+.card-h {
+	background: transparent;
+
+}
+
+.form-colour{
+	color: white;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.center {
+  text-align: center;
+}
+
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

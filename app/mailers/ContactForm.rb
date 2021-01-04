@@ -9,5 +9,3 @@ class ContactForm < ActionMailer::Base
     mail(to: @user.email, subject: 'You have a message from a user')
   end
 end
-
-

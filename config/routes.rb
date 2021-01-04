@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'contacts/index'		
-  post 'contacts/index'
   devise_for :useers
   resources :tracks
   resources :contacts, only: [:index, :create, :contact_params] 
+  get 'contacts/index'		
+  post 'contacts/index'
   root 'home#index'
   get 'home/favourites'
   get 'home/contact'

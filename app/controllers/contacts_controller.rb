@@ -7,13 +7,14 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact_form])
     #@contact = Contact.new
     if request.post?
-      ContactMailer.with(user: @contact).contact_email.deliver_now
+      ContactMailer.with(Contact: @contact).contact_email.deliver_now
       flash.now[:notice] = 'Thank you for your message!'
       render :index
     else
       flash.now[:error] = "Message did not send"
       render :index
     end
+
   end
 
   def create

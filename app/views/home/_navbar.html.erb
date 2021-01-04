@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark">
   <div class="container-fluid">
 
     <%= link_to 'TrackUP', root_path, class:"navbar-brand"%>
@@ -21,13 +21,13 @@
           <%= link_to 'Edit Profile', edit_useer_registration_path, class: 'nav-link' %>
         </li>
 
-        <li class="nav-item">
-          <%= link_to 'Sign Out', destroy_useer_session_path, method: :delete, class: 'nav-link' %>
-        </li>
-
 
         <li class="nav-item">
           <%= link_to 'Contact Us', contacts_index_path, class: 'nav-link' %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'Sign Out', destroy_useer_session_path, method: :delete, data: { confirm: 'Signing ' }, class: 'nav-link' %>
         </li>
 
         <% else %>

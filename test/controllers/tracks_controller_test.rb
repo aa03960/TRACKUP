@@ -6,7 +6,7 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get tracks_url
+    get :index
     assert_response :success
   end
 
@@ -46,3 +46,5 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to tracks_url
   end
 end
+
+

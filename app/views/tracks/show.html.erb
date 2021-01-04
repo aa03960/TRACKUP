@@ -1,13 +1,13 @@
 
-<div class="jumbotron">
+<div class="jumbotron form-colour">
   <h1 class="display-4">Track Details</h1>
-  <li>Title: <%= @track.title %> </li>
-  <li>Artist: <%= @track.artist %> </li>
-  <li >Album: <%= @track.album %> </li>
-  <li>Date Created: <%= @track.date %></li>
+  <li><b>Title:</b> <%= @track.title %> </li>
+  <li><b>Artist: </b> <%= @track.artist %> </li>
+  <li ><b>Album: </b><%= @track.album %> </li>
+  <li><b>Date Created: </b><%= @track.date %></li>
   <% if @track.favourite == true %>  
   <br>   
-  <p>This song is in your favourites.</p>
+  <p><b>This song is in your favourites.</b></p>
   <% else %>
 <% end %>
 
@@ -19,5 +19,5 @@
 <br>
 <br>
 
-<%= link_to 'Edit', edit_track_path(@track), class:"btn btn-outline-dark" %>
-<%= link_to 'Back', tracks_path, class:"btn btn-outline-dark" %>
+<%= link_to 'Edit', edit_track_path(@track), class:"btn btn-dark" %>
+<%= link_to 'Back', :back, class:"btn btn-dark" %>

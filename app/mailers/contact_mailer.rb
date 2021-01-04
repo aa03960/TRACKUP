@@ -5,6 +5,7 @@ class ContactMailer < ApplicationMailer
 
   def contact_email
   	#@contact = Contact.new
+  	@contact = params[:id]
     @url = "22222222"
     mail(to: "yes@me.com", subject: 'Welcome to My Awesome Site')
   end
